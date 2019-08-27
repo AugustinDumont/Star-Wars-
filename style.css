@@ -1,0 +1,97 @@
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-image: url(https://assets3.thrillist.com/v1/image/2822472/size/tmg-article_main_wide_2x.jpg);
+    background-size: contain;
+}
+
+.intro {
+    display: flex;
+    position: absolute;
+    top: 45%;
+    justify-content: center;
+    color: rgb(117, 180, 201);
+    font-size: 300%;
+    font-family: sans-serif;
+    height: 150px;
+    width: 100%;
+    transition: opacity 1.2s ease;
+    transition-delay: 4s;
+    opacity: 0;
+}
+
+.logo {
+    display: flex;
+    position: absolute;
+    top: 10%;
+    justify-content: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo img {
+    width: 200%;
+    animation-name: logo;
+    animation-delay: 6s;
+    animation-duration: 6s;
+    animation-timing-function: ease-out;
+    opacity: 0;
+}
+
+@keyframes logo {
+    0%, 80% {
+        opacity: 1;
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
+.title {
+    text-align: center;
+}
+
+.star-wars {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 270px;
+    width: 100%;
+    perspective: 400px;
+    color: #feda4a;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 500%;
+    font-weight: 600;
+    letter-spacing: 6px;
+    line-height: 150%;
+    text-align: justify;
+}
+
+.crawl {
+    position: relative;
+    top: 9999px;
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear;
+    animation-delay: 10s;
+  }
+
+.fade {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    top: -25px;
+    background-image: linear-gradient(0deg, transparent, black 75%);
+    z-index: 1;
+}
+
+@keyframes crawl {
+    0% {
+      top: 0;
+      transform: rotateX(20deg) translateZ(0);
+    }
+    100% { 
+      top: -6000px;
+      transform: rotateX(30deg) translateZ(-2500px);
+    }
+  }
